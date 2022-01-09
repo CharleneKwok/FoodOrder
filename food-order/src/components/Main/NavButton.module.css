@@ -1,0 +1,41 @@
+button {
+  background-color: #401302;
+  border: #401302 solid 1px;
+  border-radius: 30px;
+  margin: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 30px;
+  color: white;
+  font-family: inherit;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.badge {
+  background-color: #a43219;
+  padding: 4px 15px;
+  border-radius: 40px;
+  margin-left: 0.5rem;
+}
+
+.title {
+  display: none;
+}
+
+@media (min-width: 30rem) {
+  .title {
+    display: block;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
