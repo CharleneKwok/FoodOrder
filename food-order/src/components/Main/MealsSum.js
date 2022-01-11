@@ -3,7 +3,7 @@ import classes from "./MealsSum.module.css";
 
 const MealsSum = () => {
   return (
-    <div className={classes.container}>
+    <>
       <div className={classes.background} />
       <section className={classes.sum}>
         <h2>Delicious Food, Delivered To You</h2>
@@ -16,7 +16,7 @@ const MealsSum = () => {
           and of course by experienced chefs!
         </p>
       </section>
-    </div>
+    </>
   );
 };
 

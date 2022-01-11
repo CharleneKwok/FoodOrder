@@ -1,4 +1,4 @@
-button {
+.button {
   background-color: #401302;
   border: #401302 solid 1px;
   border-radius: 30px;
@@ -10,6 +10,13 @@ button {
   padding: 20px 30px;
   color: white;
   font-family: inherit;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 .icon {
