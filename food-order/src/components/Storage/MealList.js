@@ -1,7 +1,8 @@
 import React from "react";
 
 const MealList = React.createContext({
-  ordered: {},
+  addOrderHandler: {},
+  orderedMeals: [],
 });
 
 export default MealList;

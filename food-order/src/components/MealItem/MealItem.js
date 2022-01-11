@@ -12,10 +12,10 @@ const MealItem = (props) => {
     e.preventDefault();
     const newMeal = {
       ...meal,
-      amount: mealAmount,
-      price: meal.price * mealAmount,
+      amount: parseInt(mealAmount),
+      totalPrice: meal.price * mealAmount,
     };
-    ctx.addOrderHandler(newMeal);
+    ctx.addOrderHandler(newMeal, parseInt(mealAmount));
   };
 
   return (

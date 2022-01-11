@@ -1,19 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Cart.module.css";
 import Button from "../UI/Button";
+import MealList from "../Storage/MealList";
+import OrderedMeal from "./OrderedMeal";
 
 const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onClick}></div>;
 };
 
 const Modal = (props) => {
+  const ctx = useContext(MealList);
+  let totalPrice = 0;
+  ctx.orderedMeals.forEach((meal) => {
+    totalPrice += parseFloat(meal.totalPrice);
+  });
+
   return (
     <div className={classes.modal}>
-      <div></div>
+      <div className={classes["ordered-meal"]}>
+        {ctx.orderedMeals?.map((meal) => (
+          <OrderedMeal meal={meal} key={`order-${meal.id}`} />
+        ))}
+      </div>
       <div className={classes["total-amount"]}>
         <h2>Total Amount</h2>
-        <h2>$0</h2>
+        <h2>${parseFloat(totalPrice).toFixed(2)}</h2>
       </div>
       <div className={classes["buttons"]}>
         <Button>Order</Button>

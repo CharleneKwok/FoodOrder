@@ -3,11 +3,13 @@
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
+  z-index: 10;
 }
 
 .modal {
   position: fixed;
   max-width: 80%;
+  min-width: 267px;
   background-color: white;
   z-index: 100;
   border-radius: 20px;
@@ -18,6 +20,9 @@
   padding: 30px;
   flex-direction: column;
   box-shadow: 0 0 18px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ordered-meal {
 }
 
 .total-amount {
@@ -37,6 +42,7 @@
 
 .buttons > Button {
   margin-right: 10px;
+  margin-bottom: 3px;
   float: right;
 }
 

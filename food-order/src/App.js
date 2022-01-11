@@ -4,31 +4,38 @@ import Nav from "./components/Main/Nav";
 import MealList from "./components/Storage/MealList";
 
 function App() {
-  // localStorage.removeItem("orderedMeal");
-  const meal = [];
-  if (localStorage.getItem("orderedMeal")) {
-    const meal = localStorage.getItem("orderedMeal");
-  }
-  const [ordered, setOrdered] = useState(meal);
+  const [ordered, setOrdered] = useState([]);
 
-  const addOrder = (order) => {
+  const addOrder = (order, num) => {
     setOrdered((prev) => {
-      let hasMeal = false;
       prev.forEach((meal, idx, arr) => {
         if (meal.id === order.id) {
+          let sumPrice =
+            parseFloat(order.totalPrice) + parseFloat(meal.price) * num;
+          order.totalPrice = sumPrice;
+          order.amount = meal.amount + num;
           arr.splice(idx, 1);
-          hasMeal = true;
         }
       });
-      const newList = [...prev, order];
-      console.log(newList);
-      localStorage.setItem("orderedMeal", newList);
+      let newList = [order, ...prev];
+      newList = newList.filter((meal) => meal.amount >= 1);
+      newList.sort((a, b) => {
+        const A = [...a.id]
+          .map((char) => char.charCodeAt(0))
+          .reduce((prev, curr) => prev + curr);
+        const B = [...b.id]
+          .map((char) => char.charCodeAt(0))
+          .reduce((prev, curr) => prev + curr);
+        return A - B;
+      });
       return newList;
     });
   };
 
   return (
-    <MealList.Provider value={{ addOrderHandler: addOrder }}>
+    <MealList.Provider
+      value={{ addOrderHandler: addOrder, orderedMeals: ordered }}
+    >
       <Nav />
       <Meal />
     </MealList.Provider>
