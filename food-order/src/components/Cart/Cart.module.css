@@ -23,6 +23,8 @@
 }
 
 .ordered-meal {
+  max-height: 300px;
+  overflow: scroll;
 }
 
 .total-amount {
@@ -49,4 +51,13 @@
 .close {
   background-color: white;
   color: #761f08;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 9px;
+}
+::-webkit-scrollbar-thumb {
+  border: 1px rgb(152, 151, 151) solid;
+  border-radius: 100px;
 }
