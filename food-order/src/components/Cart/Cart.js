@@ -22,7 +22,7 @@ const Modal = (props) => {
   return (
     <div>
       {!showForm && (
-        <Card>
+        <Card className={classes.modal}>
           <div className={classes["ordered-meal"]}>
             {ctx.items.map((meal) => (
               <OrderedMeal meal={meal} key={`order-${meal.id}`} />
