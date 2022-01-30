@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import MealList from "../Storage/MealList";
+import MealList from "../../store/MealList";
 import Button from "../UI/Button";
 import classes from "./OrderedMeal.module.css";
 

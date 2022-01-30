@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Cart.module.css";
 import Button from "../UI/Button";
-import MealList from "../Storage/MealList";
+import MealList from "../../store/MealList";
 import OrderedMeal from "./OrderedMeal";
 
 const Backdrop = (props) => {

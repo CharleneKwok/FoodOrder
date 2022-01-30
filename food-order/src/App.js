@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Meal from "./components/Main/Meal";
-import Nav from "./components/Main/Nav";
-import MealList from "./components/Storage/MealList";
+import Nav from "./components/Nav/Nav";
+import MealList from "./store/MealList";
 
 function App() {
   const [ordered, setOrdered] = useState([]);

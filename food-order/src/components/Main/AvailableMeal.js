@@ -1,5 +1,5 @@
 import React from "react";
-import MealItem from "../MealItem/MealItem";
+import MealItem from "./MealItem/MealItem";
 import classes from "./AvailableMeal.module.css";
 
 const DUMMY_MEALS = [

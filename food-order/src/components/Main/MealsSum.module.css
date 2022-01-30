@@ -1,5 +1,5 @@
 .background {
-  background: url("Images/meals.jpeg") center/cover;
+  background: url("../../assets/meals.jpeg") center/cover;
   width: 100%;
   height: 15rem;
 }

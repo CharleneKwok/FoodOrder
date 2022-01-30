@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 import classes from "./NavButton.module.css";
-import CartIcon from "../Cart/CartIcon";
+import CartIcon from "../../assets/CartIcon";
 import Cart from "../Cart/Cart";
-import MealList from "../Storage/MealList";
+import MealList from "../../store/MealList";
 
 const NavButton = () => {
   const ctx = useContext(MealList);

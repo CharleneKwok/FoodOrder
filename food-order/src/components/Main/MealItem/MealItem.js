@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import MealList from "../Storage/MealList";
-import Button from "../UI/Button";
+import MealList from "../../../store/MealList";
+import Button from "../../UI/Button";
 import classes from "./MealItem.module.css";
 
 const MealItem = (props) => {
