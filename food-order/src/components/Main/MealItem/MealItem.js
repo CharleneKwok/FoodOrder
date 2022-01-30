@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import MealList from "../../../store/MealList";
+import CartContext from "../../../store/cart-context";
 import Button from "../../UI/Button";
 import classes from "./MealItem.module.css";
 
 const MealItem = (props) => {
+  const ctx = useContext(CartContext);
   const [mealAmount, setMealAmount] = useState(1);
-  const ctx = useContext(MealList);
   const meal = props.meal;
 
   const addMeal = (e) => {
@@ -15,7 +15,7 @@ const MealItem = (props) => {
       amount: parseInt(mealAmount),
       totalPrice: meal.price * mealAmount,
     };
-    ctx.addOrderHandler(newMeal, parseInt(mealAmount));
+    ctx.addItem(newMeal);
   };
 
   return (

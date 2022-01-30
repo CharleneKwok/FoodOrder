@@ -2,10 +2,10 @@ import React, { useContext, useState } from "react";
 import classes from "./NavButton.module.css";
 import CartIcon from "../../assets/CartIcon";
 import Cart from "../Cart/Cart";
-import MealList from "../../store/MealList";
+import CartContext from "../../store/cart-context";
 
 const NavButton = () => {
-  const ctx = useContext(MealList);
+  const ctx = useContext(CartContext);
   const [openCart, setOpenCart] = useState(false);
 
   const closeModal = () => {
@@ -13,7 +13,7 @@ const NavButton = () => {
   };
 
   let totalAmount = 0;
-  ctx.orderedMeals.forEach((meal) => {
+  ctx.items.forEach((meal) => {
     totalAmount += parseInt(meal.amount);
   });
 
