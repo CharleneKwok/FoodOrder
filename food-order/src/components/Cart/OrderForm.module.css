@@ -1,5 +1,6 @@
 .form {
   max-width: 50%;
+  top: 15vh;
   justify-content: space-around;
 }
 
@@ -7,15 +8,38 @@
   border-radius: 10px;
   height: 40px;
   padding: 8px;
-  margin-top: 5px;
+  margin: 5px 0 7px 0;
   border: 1px black solid;
   font-family: inherit;
   font-size: large;
 }
 
+.form p {
+  color: rgb(193, 3, 3);
+  margin: 2px 2px 3px 0;
+}
+
+.success {
+  max-width: 40%;
+  flex-direction: row;
+  justify-content: center;
+  top: 40vh;
+  align-items: center;
+}
+
+.success p {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 700px) {
   .form {
+    min-width: 100%;
     top: 10vh;
+  }
+
+  .success {
     min-width: 100%;
   }
 }

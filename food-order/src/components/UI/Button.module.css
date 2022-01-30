@@ -16,3 +16,13 @@
   font-weight: bold;
   box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.3);
 }
+
+.button:disabled,
+.button:disabled:hover,
+.button:disabled:active {
+  cursor: not-allowed;
+  border-color: #ccc;
+  cursor: not-allowed;
+  background-color: #ccc;
+  color: aliceblue;
+}

@@ -1,18 +1,17 @@
 import React, { useContext, useState } from "react";
+import Card from "../UI/Card";
 import ReactDOM from "react-dom";
-import classes from "./Cart.module.css";
 import Button from "../UI/Button";
 import CartContext from "../../store/cart-context";
 import OrderedMeal from "./OrderedMeal";
 import OrderForm from "./OrderForm";
-import Card from "../UI/Card";
+import classes from "./Cart.module.css";
 
 const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onClick}></div>;
 };
 
 const Modal = (props) => {
-  console.log("🚀 ~ props", props);
   const ctx = useContext(CartContext);
   const [showForm, setShowForm] = useState(false);
 
