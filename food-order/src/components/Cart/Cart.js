@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import ReactDOM from "react-dom";
 import classes from "./Cart.module.css";
 import Button from "../UI/Button";

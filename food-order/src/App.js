@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Meal from "./components/Main/Meal";
 import Nav from "./components/Nav/Nav";
 import CartProvider from "./store/CartProvider";
