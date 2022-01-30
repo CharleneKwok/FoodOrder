@@ -33,7 +33,12 @@ const Modal = (props) => {
             <h2>${ctx.totalAmount.toFixed(2)}</h2>
           </div>
           <div className={classes["buttons"]}>
-            <Button onClick={() => setShowForm(true)}>Order</Button>
+            <Button
+              onClick={() => setShowForm(true)}
+              disabled={ctx.items.length === 0}
+            >
+              Order
+            </Button>
             <Button onClick={props.onCloseButton} className={classes.close}>
               Close
             </Button>
