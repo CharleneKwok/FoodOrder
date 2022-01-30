@@ -3,10 +3,22 @@
   max-width: 95%;
   border-radius: 20px;
   margin: 30px auto;
+  animation: moveUp 800ms ease-in forwards;
 }
 
 @media (min-width: 40rem) {
   .container {
     max-width: 80vw;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
