@@ -1,0 +1,17 @@
+.card {
+  position: fixed;
+  max-width: 80%;
+  min-width: 267px;
+  background-color: white;
+  z-index: 100;
+  border-radius: 20px;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 18px 10px rgba(0, 0, 0, 0.5);
+  animation: moveUp 500ms ease-in-out forwards;
+}
